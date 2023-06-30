@@ -1,0 +1,182 @@
+$color: #1F2227;
+
+
+:root{
+    --card-title-bg: #fff;
+    --card-title-border: #FBA500;
+    --header-primary-bg: #009BBD;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    background-color: var(--header-primary-bg);
+    height: 100px;
+    width: 100vw;
+    nav{
+        padding: 30px;
+        ul{
+            float: right;
+            li{
+                display: inline-block;
+                // float: left;
+                &:not(:first-child){
+                  margin-left: 25px;
+                }
+                a{
+                  display: inline-block;
+                  outline: none;
+                  color: $color;
+                  font-size: 16px;
+                  text-decoration: none;
+                  letter-spacing: .04em;
+                  &:hover{
+                    color: gray;
+                    text-decoration: none}
+                  }
+    
+            }
+    
+        }
+    
+    }
+    #nav:checked + .nav-open{
+        transform: rotate(45deg);
+        i{
+            background: white;
+            transition: transform .2s ease;
+            &:nth-child(1){ transform: translateY(6px) rotate(180deg)}
+            &:nth-child(2){ opacity: 0}
+            &:nth-child(3){ transform: translateY(-6px) rotate(90deg)}
+        }
+    }
+    #nav:checked ~ .nav-container{
+        z-index: 9990;
+        opacity: 1;
+        ul li{
+            a{
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+    }
+    .hidden{
+      display: none;
+    }
+}
+
+.home{
+    background-image: url(https://www.dourados.ms.gov.br/wp-content/uploads/2014/08/Ilumina%C3%A7%C3%A3o-de-natal-monumento-ao-colono-4.jpg);
+    background-size:100% 300px ;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+}
+
+main{
+    padding-top: 100px;
+    height: 100vh;
+    .row{align-items: stretch;}
+}
+
+.card{margin-bottom: 20px; 
+
+    justify-content: flex-end;
+    min-height: 250px;
+    &-title{
+        height: auto;
+        padding: 10px 15px;
+        span{
+            border-left: 2px solid var(--card-title-border);
+            background-color: var(--card-title-bg);
+             }
+    }
+        
+}
+
+.container{
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 560px) {
+	.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: $color;
+    opacity: 0;
+    transition: all .2s ease}
+    ul{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      li{
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+        &:nth-child(1) a{
+          transition-delay: .2s}
+        &:nth-child(2) a{
+          transition-delay: .3s}
+        &:nth-child(3) a{
+          transition-delay: .4s}
+        &:nth-child(4) a{
+          transition-delay: .5s}
+        &:not(:first-child){
+          margin-left: 0}
+        a{
+          padding: 10px 25px;
+          opacity: 0;
+          color:white;
+          font-size: 24px;
+          font-weight: 600;
+          transform: translateY(-20px);
+          transition: all .2s ease}
+        }
+    }
+          
+   .nav-open{
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width :48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+        i{
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: $color;
+            border-radius: 2px;
+            margin-left: 14px;
+            &:nth-child(1){
+                margin-top: 16px
+            }
+            &:nth-child(2){
+                margin-top: 4px;
+                opacity: 1
+            }
+            &:nth-child(3){
+                margin-top: 4px
+            }
+        }
+   }
+}
+  
