@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugingar.com</title>
+    <link rel="stylesheet" href="dist/css/navbar.min.css">
+    <link rel="stylesheet" href="dist/css/carousel.min.css">
+    <link rel="stylesheet" href="dist/css/card.min.css">
+</head>
+<body>
+    <!-- MODELO DE NAVBAR RETIRADO DE: 
+         https://codepen.io/piyushpd139/pen/gOYvZPG 
+    -->
+    <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">
+            <h1>Bugingar 
+                <!-- <small>Bugingou, trocou!</small> -->
+            </h1>
+            
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-th-large"></i>Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-address-book"></i>Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-user-plus"></i>Criar conta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="far fa-question-circle"></i>Dúvidas?</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);">
+                        <i class="fas fa-sign-out-alt"></i>Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- MODELO DE CARD SLIDER RETIRADO DE: 
+                     https://codepen.io/sonlts2020/pen/XWqqWom
+                 -->
+                <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="cards-wrapper">
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="cards-wrapper">
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="image-wrapper">
+                              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <header class="ms-header">
+                        <h1 class="ms-header__title">
+                          Bugingou, 
+                          <div class="ms-slider">
+                            <ul class="ms-slider__words">
+                              <li class="ms-slider__word text-success">trocou!</li>
+                              <li class="ms-slider__word text-primary">doou!</li>
+                              <li class="ms-slider__word text-danger">alugou!</li>
+                              <!-- Este último item precisa ser duplicata do primeiro para manter a proposta do looping infinito -->
+                              <li class="ms-slider__word text-success">trocou!</li>
+                            </ul>
+                          </div>
+                        </h1>
+                      </header>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-4">
+            <div class="row" data-masonry='{"percentPosition": true }'>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        
+                        <a href="item.html"><img src="../bugingar/dist/fotos_posts/pinterest-1.jpg" class="card-img" alt="..."></a>
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2">
+                                <a href="categoria.html"><i class="fas fa-exchange-alt"></i>TROCA</a>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text text-end"><small>anunciado em 29/06/2023</small></p>
+                          <p class="card-text">This is a wider card with supporting text below as a natural ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-2.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2"><i class="far fa-money-bill-alt"></i>ALUGUEL</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-3.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2"><i class="fas fa-hand-holding-heart"></i>DOAÇÃO</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-4.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2"><i class="fas fa-exchange-alt"></i>TROCA</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-5.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2"><i class="far fa-money-bill-alt"></i>ALUGUEL</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-6.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2"><i class="fas fa-hand-holding-heart"></i>DOAÇÃO</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This content is a little bit longer.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-7.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2"><i class="fas fa-exchange-alt"></i>TROCA</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text"> This content is a little bit longer.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-8.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2"><i class="far fa-money-bill-alt"></i>ALUGUEL</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-14.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2"><i class="fas fa-hand-holding-heart"></i>DOAÇÃO</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This content is a little bit longer.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-13.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-danger bg-gradient text-center text-white p-2"><i class="far fa-money-bill-alt"></i>ALUGUEL</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>                            
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-11.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-success bg-gradient text-center text-white p-2"><i class="fas fa-exchange-alt"></i>TROCA</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>                            
+                            <p class="card-text">This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="card text-dark mb-4">
+                        <img src="../bugingar/dist/fotos_posts/pinterest-12.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <span class="badge rounded-pill bg-primary bg-gradient text-center text-white p-2"><i class="fas fa-hand-holding-heart"></i>DOAÇÃO</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-end"><small>Last updated 3 mins ago</small></p>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="banner col-md-12" style="text-align: center;"><img src="http://www.placehold.it/970x250" alt=""></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="dist/js/navbar.dev.js"></script>
+    <script src="dist/js/app.dev.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+</body>
+</html>
