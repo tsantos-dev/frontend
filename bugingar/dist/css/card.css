@@ -1,0 +1,68 @@
+.card {
+  border-radius: 10px;
+  overflow: auto;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+.card .card-img-overlay {
+  display: inline-table;
+}
+.card .card-img-overlay .badge a {
+  color: #fff;
+}
+
+.ms-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  margin: 50px auto;
+}
+.ms-header__title {
+  flex: 1 1 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ms-slider {
+  display: inline-block;
+  height: 1.5em;
+  overflow: hidden;
+  vertical-align: middle;
+  mask-image: linear-gradient(transparent, #999898, #999898, #999898, transparent);
+  mask-type: luminance;
+  mask-mode: alpha;
+}
+.ms-slider__words {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation-name: wordSlider;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+}
+.ms-slider__word {
+  display: block;
+  line-height: 1.3em;
+  text-align: left;
+}
+
+@keyframes wordSlider {
+  0%, 27% {
+    transform: translateY(0%);
+  }
+  33%, 60% {
+    transform: translateY(-25%);
+  }
+  66%, 93% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(-75%);
+  }
+}
