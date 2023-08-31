@@ -9,6 +9,10 @@
 .card .card-img-overlay .badge a {
   color: #fff;
 }
+.card.statusFalse {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .ms-header {
   display: flex;

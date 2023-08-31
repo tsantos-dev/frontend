@@ -1,25 +1,17 @@
-$color: #1F2227;
-
-
-:root{
-    --card-title-bg: #fff;
-    --card-title-border: #FBA500;
-    --header-primary-bg: #009BBD;
-}
-
+@import url(variaveis.scss);
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
 }
+body{background-color: #f2f2f2!important;}
 
 header{
     background-color: var(--header-primary-bg);
     height: 100px;
-    width: 100vw;
+    width: 100%;
     nav{
-        padding: 30px;
         ul{
             float: right;
             li{
@@ -72,16 +64,18 @@ header{
 
 .home{
     background-image: url(https://www.dourados.ms.gov.br/wp-content/uploads/2014/08/Ilumina%C3%A7%C3%A3o-de-natal-monumento-ao-colono-4.jpg);
-    background-size:100% 300px ;
+    background-size:100% auto ;
     background-position: top center;
     background-repeat: no-repeat;
-    background-clip: content-box;
+    background-clip: border-box;
+    block-size: 300px;
 }
 
 main{
-    padding-top: 100px;
+    padding-top: 200px;
     height: 100vh;
     .row{align-items: stretch;}
+    
 }
 
 .card{margin-bottom: 20px; 
