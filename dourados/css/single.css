@@ -1,4 +1,21 @@
-@import url(variaveis.scss);
-.single {
-  background-color: var(--header-primary-bg);
+@import url(variaveis.min.css);
+.single main {
+  background: var(--header-primary-bg);
+  background: linear-gradient(180deg, #009bbd 0%, #00d4ff 40%, white 90%);
+  padding-top: 50px;
+}
+.single-content .container {
+  background-color: #fff;
+}
+.single .img-featured {
+  width: 100%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border: 2px solid #fff;
+  filter: drop-shadow(2px 4px 12px rgba(0, 0, 0, 0.4));
+}
+.single .post-title {
+  text-transform: uppercase;
+  border-left: 5px solid var(--card-title-border);
+  padding-left: 10px;
 }

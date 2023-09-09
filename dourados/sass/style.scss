@@ -1,4 +1,7 @@
-@import url(variaveis.scss);
+@import url(variaveis.min.css);
+
+$color: #1F2227;
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -62,8 +65,8 @@ header{
     }
 }
 
-.home{
-    background-image: url(https://www.dourados.ms.gov.br/wp-content/uploads/2014/08/Ilumina%C3%A7%C3%A3o-de-natal-monumento-ao-colono-4.jpg);
+.home-content{
+    background-image: url(https://www.turismo.ms.gov.br/wp-content/uploads/2016/03/Ver%C3%B4nica-Lira-Kupfer-Mota-Desbravadores-11.jpg);
     background-size:100% auto ;
     background-position: top center;
     background-repeat: no-repeat;

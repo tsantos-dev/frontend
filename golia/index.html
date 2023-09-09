@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golia</title>
+    <link rel="stylesheet" href="dist/css/styles.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Permic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href=""><span class="icon"><i class="fas fa-adjust"></i></span><span class="title">Contraste</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-audio-description" aria-hidden="true"></i></span><span class="title">Áudio descrição</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-sign-language" aria-hidden="true"></i></span><span class="title">VLibras</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-microphone" aria-hidden="true"></i></span><span class="title">Microfone</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-camera" aria-hidden="true"></i></span><span class="title">Print da tela</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-video" aria-hidden="true"></i></span><span class="title">Câmera</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-desktop" aria-hidden="true"></i></span><span class="title">Compartilhar tela</span></a></li>
+                <li><a href=""><span class="icon"><i class="fas fa-comment-alt" aria-hidden="true"></i></span><span class="title">Chat</span></a></li>
+                <li><a href="" class="active"><span class="icon"><i class="fas fa-users" aria-hidden="true"></i></span><span class="title">Usuários</span></a></li>
+                <!-- <li><a href=""><span class="icon"><i class="fas fa-right-from-bracket" aria-hidden="true"></i></span><span class="title">Sair da sala</span></a></li> -->
+                <!-- <li><a href=""><span class="icon"></span><span class="title"></span></a></li> -->
+            </ul>
+            <div class="toggle"></div>
+        </div>
+        <div class="video">
+            <video id="video" autoplay></video>
+            <div class="question">
+                <i class="fas fa-comments"></i> Envie uma pergunta:
+                <input type="text" name="" id="">
+                <button><i class="fas fa-share"></i></button>
+            </div>    
+        </div>
+        <div class="boxes">
+            <div id="users">
+
+                <ul>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário</span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 1</span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 2 </span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 3</span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 4</span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 5</span>
+                    </li>
+                    <!-- <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 6</span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 7</span>
+                    </li>
+                    <li>
+                        <img src="https://loremflickr.com/100/100/people" />
+                        <span>Nome do usuário 8</span>
+                    </li> -->
+                    
+                </ul>
+            </div>
+            <div id="chat"></div>
+            <div id="speechToText"></div>
+        </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <script>
+        // const navigation = document.querySelector('.navigation');
+        // document.querySelector('.toggle').onclick = function(){
+        //     this.classList.toggle('active');
+        //     navigation.classList.toggle('active');
+        // }
+
+        function startVideoFromCamera(){
+
+            const specs = {video:{width:1080}, audio:true}
+
+            navigator.mediaDevices.getUserMedia(specs).then(stream => {
+                const videoElement = document.querySelector('#video')
+                videoElement.srcObject = stream
+            }).catch(error=>{console.log(error)})
+
+        }
+
+        window.addEventListener('DOMContentLoaded', startVideoFromCamera);
+
+    </script>
+</body>
+</html>

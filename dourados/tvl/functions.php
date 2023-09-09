@@ -1,4 +1,11 @@
 <?php
+
+define('TVL_THEME_URL', get_template_directory_uri());
+define('TVL_THEME_DIR', get_template_directory());
+define('TVL_TEMPLATES_DIR', TVL_THEME_DIR . '/template_parts/');
+define('TVL_STYLES_URL', TVL_THEME_URL . '/css/');
+define('TVL_IMAGES_URL', TVL_THEME_URL . '/images/');
+
 // Add a widget in WordPress Dashboard
 function wpc_dashboard_widget_function() {
     // Entering the text between the quotes
@@ -48,6 +55,29 @@ function wpdocs_theme_name_scripts() {
 	wp_enqueue_style( 'style_site', get_template_directory_uri() . '/css/style.min.css'  );
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'  );
 	// wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
+    if (is_single()) {
+        $style_url = TVL_STYLES_URL . 'single.css';
+        wp_enqueue_style('single-style-css', $style_url);
+    }
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+if (function_exists('add_theme_support')) {
+    // adicionamos ao tema o suporte a "thumbnails"
+    add_theme_support('post-thumbnails');
+    // se a função 'add_image_size' também estiver disponível
+    if (function_exists('add_image_size')) {
+        // cadastramos os tamanhos de thumbnails que o wordpress terá que gerar
+        add_image_size('thumb_695x475', 695, 475, true);
+        // add_image_size('thumb_480x279', 480, 279, true);
+        // add_image_size('thumb_480x277', 480, 277, true);
+        // add_image_size('thumb_480x241', 480, 241, true);
+        // add_image_size('thumb_655x380', 655, 380, true);
+        // add_image_size('thumb_480x292', 480, 292, true);
+        // add_image_size('thumb_65x65', 65, 65, true);
+    }
+}
+
+
+
 ?>
