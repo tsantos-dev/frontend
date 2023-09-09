@@ -15,15 +15,15 @@
     <div class="container">
         <div class="navigation">
             <ul>
-                <li><a href=""><span class="icon"><i class="fas fa-adjust"></i></span><span class="title">Contraste</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-audio-description" aria-hidden="true"></i></span><span class="title">Áudio descrição</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-sign-language" aria-hidden="true"></i></span><span class="title">VLibras</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-microphone" aria-hidden="true"></i></span><span class="title">Microfone</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-camera" aria-hidden="true"></i></span><span class="title">Print da tela</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-video" aria-hidden="true"></i></span><span class="title">Câmera</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-desktop" aria-hidden="true"></i></span><span class="title">Compartilhar tela</span></a></li>
-                <li><a href=""><span class="icon"><i class="fas fa-comment-alt" aria-hidden="true"></i></span><span class="title">Chat</span></a></li>
-                <li><a href="" class="active"><span class="icon"><i class="fas fa-users" aria-hidden="true"></i></span><span class="title">Usuários</span></a></li>
+                <li id="btn_contrast"><a><span class="icon"><i class="fas fa-adjust"></i></span><span class="title">Contraste</span></a></li>
+                <li id="btn_audioDescription" onClick="reply_click(this.id)"><a><span class="icon"><i class="fas fa-audio-description" aria-hidden="true"></i></span><span class="title">Áudio descrição</span></a></li>
+                <li id="btn_vlibras" onClick="reply_click(this.id)"><a><span class="icon"><i class="fas fa-sign-language" aria-hidden="true"></i></span><span class="title">VLibras</span></a></li>
+                <li id="btn_microphone"><a><span class="icon"><i class="fas fa-microphone" aria-hidden="true"></i></span><span class="title">Microfone</span></a></li>
+                <li id="btn_screenshot"><a><span class="icon"><i class="fas fa-camera" aria-hidden="true"></i></span><span class="title">Print da tela</span></a></li>
+                <li id="btn_camera" onClick="reply_click(this.id)"><a><span class="icon"><i class="fas fa-video" aria-hidden="true"></i></span><span class="title">Câmera</span></a></li>
+                <li id="btn_share" onClick="reply_click(this.id)"><a><span class="icon"><i class="fas fa-desktop" aria-hidden="true"></i></span><span class="title">Compartilhar tela</span></a></li>
+                <li id="btn_chat" onClick="reply_click(this.id)"><a><span class="icon"><i class="fas fa-comment-alt" aria-hidden="true"></i></span><span class="title">Chat</span></a></li>
+                <li id="btn_user" onClick="reply_click(this.id)"><a class="active"><span class="icon"><i class="fas fa-users" aria-hidden="true"></i></span><span class="title">Usuários</span></a></li>
                 <!-- <li><a href=""><span class="icon"><i class="fas fa-right-from-bracket" aria-hidden="true"></i></span><span class="title">Sair da sala</span></a></li> -->
                 <!-- <li><a href=""><span class="icon"></span><span class="title"></span></a></li> -->
             </ul>
@@ -38,66 +38,201 @@
             </div>    
         </div>
         <div class="boxes">
-            <div id="users">
-
-                <ul>
-                    <li>
+            <div id="users" class="user slider vertical-slider" style="display: none;">
+                <ul class="slick">
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário</span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 1</span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 2 </span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 3</span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 4</span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 5</span>
                     </li>
-                    <!-- <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 6</span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 7</span>
                     </li>
-                    <li>
+                    <li class="item">
                         <img src="https://loremflickr.com/100/100/people" />
                         <span>Nome do usuário 8</span>
-                    </li> -->
+                    </li>
                     
                 </ul>
             </div>
-            <div id="chat"></div>
+            <div id="chat">
+                <ul>
+                    <li>
+                        <figure>
+                            <img src="https://loremflickr.com/100/100/people" />
+                            <figcaption>
+                                <span class="hora">enviado às 10h32</span>
+                                <span>Nome do usuário 8</span>
+                            </figcaption>
+                        </figure>
+                        <p class="text">Lorem psum dolor sit amet consecquour. Lorem psum dolor sit amet consecquour</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://loremflickr.com/100/100/people" />
+                            <figcaption>
+                                <span class="hora">enviado às 10h32</span>
+                                <span>Nome do usuário 8</span>
+                            </figcaption>
+                        </figure>
+                        <p class="text">Lorem psum dolor sit amet consecquour</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://loremflickr.com/100/100/people" />
+                            <figcaption>
+                                <span class="hora">enviado às 10h32</span>
+                                <span>Nome do usuário 8</span>
+                            </figcaption>
+                        </figure>
+                        <p class="text">Lorem psum dolor sit amet consecquour. Lorem psum dolor sit amet consecquour</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="https://loremflickr.com/100/100/people" />
+                            <figcaption>
+                                <span class="hora">enviado às 10h32</span>
+                                <span>Nome do usuário 8</span>
+                            </figcaption>
+                        </figure>
+                        <p class="text">Lorem psum dolor sit amet consecquour</p>
+                    </li>
+                </ul>
+                <input type="text" name="" id=""> <button>ENVIAR</button>
+            </div>
             <div id="speechToText"></div>
         </div>
     </div>
-    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+
+    <div class="src-preview">
+        <div class="screenshot">
+            <i id="close-btn" class="fas fa-times-circle"></i>
+            <img src="" alt="screenshot image">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
     <script>
+        $('.slick', '.vertical-slider').slick({
+            vertical: true,
+            verticalSwiping: true,
+            slidesToShow: 5,
+            slidesToScroll: 2,
+            dots: true,
+            infinite: false,
+            lazyLoad: 'ondemand',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+        function reply_click(clicked_id){
+            // let id = document.querySelector(clicked_id);
+            document.querySelector('.'+clicked_id).classList.toggle('active')
+            alert('.'+clicked_id);
+        }
+
         // const navigation = document.querySelector('.navigation');
         // document.querySelector('.toggle').onclick = function(){
-        //     this.classList.toggle('active');
+            // this.classList.toggle('active');
         //     navigation.classList.toggle('active');
         // }
 
+        // SCRIPT PARA SCREENSHOT
+
+        //botao de click para requisitar o compartilhamento
+        const screenshotBtn = document.querySelector('#btn_screenshot');
+        //tela de preview do print e botao para fechar o preview
+        const screenshotPreview = document.querySelector('.src-preview');
+        const closeBtn = screenshotPreview.querySelector('#close-btn');
+
+        //função para habilitar o compartilhamento de tela
+        const captureScreen = async () => {
+            try{
+                const stream = await navigator.mediaDevices.getDisplayMedia({ preferCurrentTab: true });
+                const video = document.createElement("video");
+
+                video.addEventListener("loadedmetadata", () => {
+                    const canvas = document.createElement("canvas");
+                    const ctx = canvas.getContext("2d");
+
+                    //passando a largura ew altura do video como altura e largura do canvas
+                    canvas.width = video.videoScreen;
+                    canvas.height = video.videoHeight;
+                    video.play(); //inicia o video com a imagem desenhada
+                    //desenhando uma imagem da captura do video
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    stream.getVideoTracks()[0].stop();
+
+                    screenshotPreview.querySelector('img').src = canvas.toDataURL('image/png', 1.0);
+                    screenshotPreview.classList.add("show");
+                    // document.body.appendChild(canvas);
+
+                    // console.log(grayImg.src)
+                })
+                video.srcObject = stream //passando o dado capturado como objeto de video
+                // console.log(stream.getVideoTracks()[0])
+            }catch(error){
+                console.log(error)
+                alert("Falha para capturar tela!")
+            }
+        }
+        closeBtn.addEventListener("click", () => screenshotPreview.classList.toggle("show"));
+        screenshotBtn.addEventListener("click", captureScreen)
+
+
+        // SCRIPT TESTE PARA EXIBIÇÃO DA CÂMERA
         function startVideoFromCamera(){
 
             const specs = {video:{width:1080}, audio:true}
 
             navigator.mediaDevices.getUserMedia(specs).then(stream => {
-                const videoElement = document.querySelector('#video')
+                const videoElement = document.querySelector('#video');
                 videoElement.srcObject = stream
             }).catch(error=>{console.log(error)})
 
@@ -106,5 +241,7 @@
         window.addEventListener('DOMContentLoaded', startVideoFromCamera);
 
     </script>
+
+    <!-- <script src="dist/js/buttons.js" defer></script> -->
 </body>
 </html>

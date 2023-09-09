@@ -60,7 +60,7 @@ body{background-color: #333; font-size: 10px;}
                         font-size: 2rem;
                         color: #999;
                         font-family: FontAwesome;
-
+                        cursor: pointer;
 
                         .fas:hover{
                             color:#fff;
@@ -167,6 +167,156 @@ body{background-color: #333; font-size: 10px;}
                 }
 
             }
+            &.slider {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+            .slick {
+                position: relative;
+                overflow: hidden;
+                button {
+                    display: inline-block;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1;
+                    text-align: center;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .item {
+                  img {
+                    display: block;
+                  }
+                }
+              }
+              .slick-no-slide {
+                .slick-track {
+                  width: 100% !important;
+                  text-align: center;
+                  transform: inherit !important;
+                }
+                .slick-slide {
+                  float: none;
+                  display: inline-block;
+                }
+              }
+              .slick-list {
+                position: relative;
+                overflow: hidden;
+              }
+              .slick-dots {
+                text-align: center;
+                li {
+                  display: inline-block;
+                  button {
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 2.5px;
+                    font-size: 0;
+                    background-color: grey;
+                    border-radius: 50%;
+                    border: none;
+                  }
+                }
+                .slick-active {
+                  button {
+                    background-color: black;
+                  }
+                }
+              }
+              .slick-prev {
+                // width: 100%;
+                // height: 20px;                
+                background: rgba(0,0,0, 0);
+                // background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(17,17,17,.3) 50%, rgba(51,51,51,0) 100%);
+              }
+              .slick-next {
+                background: rgba(0,0,0, 0);
+                // background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(17,17,17,.3) 50%, rgba(51,51,51,0) 100%);
+              }
+              .slick-arrow {
+                width: 100%;
+                height: 30px;
+                font-size: 0;
+                background-size: 100% 100%;
+              }
+            //   .slick-disabled {
+            //   }
+        }
+        #chat{
+            background-color: #fff;
+            margin-right:20px;
+            padding: 20px;
+            border-radius: 10px;
+            ul{
+                list-style: none;
+                li{
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    
+                    figure{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        img{
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            margin: 10px;
+                        }
+                        figcaption{
+                            display: flex;
+                            flex-direction: column;
+                            span:nth-child(even){
+                                font-weight: bold;
+                                font-size: .8rem;
+                                color: #333;
+                            }
+                        }
+                    }
+                    .text{margin-left: 45px; padding-bottom: 5px; border-bottom: 1px solid #ccc; font-size: 1rem;}                                   
+                }
+            }
+            input{height: 30px; padding: 3px;}
+            button{height: 30px; padding: 5px 5px; font-size: .6rem;}
+        }
+    }
+}
+
+
+.src-preview{
+    position: fixed;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .65);
+    z-index: 100;
+    display: none;
+
+    &.show{
+        display: block;
+    }
+
+    .screenshot{
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        width: 60%;
+        aspect-ratio: 16 / 9;       
+        top: 50%;
+
+        img{width: 100%;}
+        #close-btn{
+            position: absolute;
+            right: -25px;
+            top: -25px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #fff;
         }
     }
 }

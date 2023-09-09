@@ -64,6 +64,7 @@ body {
   font-size: 2rem;
   color: #999;
   font-family: FontAwesome;
+  cursor: pointer;
 }
 .container .navigation ul li a .icon .fas:hover {
   color: #fff;
@@ -162,4 +163,150 @@ body {
   height: 80px;
   border: 5px solid #00e1ff;
   border-radius: 50%;
+}
+.container .boxes #users.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.container .boxes #users .slick {
+  position: relative;
+  overflow: hidden;
+}
+.container .boxes #users .slick button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.container .boxes #users .slick .item img {
+  display: block;
+}
+.container .boxes #users .slick-no-slide .slick-track {
+  width: 100% !important;
+  text-align: center;
+  transform: inherit !important;
+}
+.container .boxes #users .slick-no-slide .slick-slide {
+  float: none;
+  display: inline-block;
+}
+.container .boxes #users .slick-list {
+  position: relative;
+  overflow: hidden;
+}
+.container .boxes #users .slick-dots {
+  text-align: center;
+}
+.container .boxes #users .slick-dots li {
+  display: inline-block;
+}
+.container .boxes #users .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  margin: 0 2.5px;
+  font-size: 0;
+  background-color: grey;
+  border-radius: 50%;
+  border: none;
+}
+.container .boxes #users .slick-dots .slick-active button {
+  background-color: black;
+}
+.container .boxes #users .slick-prev {
+  background: rgba(0, 0, 0, 0);
+}
+.container .boxes #users .slick-next {
+  background: rgba(0, 0, 0, 0);
+}
+.container .boxes #users .slick-arrow {
+  width: 100%;
+  height: 30px;
+  font-size: 0;
+  background-size: 100% 100%;
+}
+.container .boxes #chat {
+  background-color: #fff;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container .boxes #chat ul {
+  list-style: none;
+}
+.container .boxes #chat ul li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.container .boxes #chat ul li figure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container .boxes #chat ul li figure img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.container .boxes #chat ul li figure figcaption {
+  display: flex;
+  flex-direction: column;
+}
+.container .boxes #chat ul li figure figcaption span:nth-child(even) {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #333;
+}
+.container .boxes #chat ul li .text {
+  margin-left: 45px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+}
+.container .boxes #chat input {
+  height: 30px;
+  padding: 3px;
+}
+.container .boxes #chat button {
+  height: 30px;
+  padding: 5px 5px;
+  font-size: 0.6rem;
+}
+
+.src-preview {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 100;
+  display: none;
+}
+.src-preview.show {
+  display: block;
+}
+.src-preview .screenshot {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 60%;
+  aspect-ratio: 16/9;
+  top: 50%;
+}
+.src-preview .screenshot img {
+  width: 100%;
+}
+.src-preview .screenshot #close-btn {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
 }
