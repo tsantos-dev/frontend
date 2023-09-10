@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -298,9 +299,21 @@ body {
   width: 60%;
   aspect-ratio: 16/9;
   top: 50%;
+  text-align: center;
 }
 .src-preview .screenshot img {
   width: 100%;
+  margin-top: 10px;
+}
+.src-preview .screenshot .btn_download {
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  background-color: #00e1ff;
+  color: #000;
+  font-size: 1rem;
+  margin-top: 20px;
 }
 .src-preview .screenshot #close-btn {
   position: absolute;

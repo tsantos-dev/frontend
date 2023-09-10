@@ -131,9 +131,11 @@
     <div class="src-preview">
         <div class="screenshot">
             <i id="close-btn" class="fas fa-times-circle"></i>
-            <img src="" alt="screenshot image">
+            <img src="" alt="screenshot image" />
+            <a href="" download class="btn_download"> Salvar screenshot <i class="fas fa-save"></i></a>         
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
     <script>
@@ -192,34 +194,37 @@
         const closeBtn = screenshotPreview.querySelector('#close-btn');
 
         //função para habilitar o compartilhamento de tela
-        const captureScreen = async () => {
+        const captureScreen = async() => {
             try{
                 const stream = await navigator.mediaDevices.getDisplayMedia({ preferCurrentTab: true });
                 const video = document.createElement("video");
 
-                video.addEventListener("loadedmetadata", () => {
-                    const canvas = document.createElement("canvas");
+                video.addEventListener('loadedmetadata', () => {
+                    const canvas = document.createElement('canvas');
                     const ctx = canvas.getContext("2d");
 
                     //passando a largura ew altura do video como altura e largura do canvas
-                    canvas.width = video.videoScreen;
+                    canvas.width = video.videoWidth;
                     canvas.height = video.videoHeight;
+
                     video.play(); //inicia o video com a imagem desenhada
                     //desenhando uma imagem da captura do video
                     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                     stream.getVideoTracks()[0].stop();
 
-                    screenshotPreview.querySelector('img').src = canvas.toDataURL('image/png', 1.0);
-                    screenshotPreview.classList.add("show");
-                    // document.body.appendChild(canvas);
+                    dataURL = canvas.toDataURL('image/png', 1.0);
+                    // console.log(dataURL);
 
-                    // console.log(grayImg.src)
+                    screenshotPreview.querySelector('img').src = dataURL;
+                    screenshotPreview.querySelector('a').href= dataURL;
+                    screenshotPreview.classList.add("show");
+
                 })
                 video.srcObject = stream //passando o dado capturado como objeto de video
-                // console.log(stream.getVideoTracks()[0])
+
             }catch(error){
                 console.log(error)
-                alert("Falha para capturar tela!")
+                alert("Falha para capturar tela!");
             }
         }
         closeBtn.addEventListener("click", () => screenshotPreview.classList.toggle("show"));
