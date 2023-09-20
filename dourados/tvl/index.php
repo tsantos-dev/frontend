@@ -6,10 +6,10 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-md-6 col-sm-12 mx-0 px-0">
-                    <div class="card rounded-0 border-0">
+                    <div class="card rounded-0 border-0 p-4">
                         <h2 class=""><span>Sobre o projeto</span></h2>
                         <p><?php bloginfo( 'description' ) ?></p>
-                        <div class="card-footer">saiba mais</div>
+                        <div class="card-footer"><a href="./o-projeto">saiba mais</a></div>
                     </div>
                 </div>
                 <?php

@@ -11,6 +11,9 @@ $color: #1F2227;
     &-content{
         .container{
             background-color: #fff;
+            .content-text{
+                padding: 50px;
+            }
         }
     }
     .img-featured{

@@ -6,6 +6,15 @@ define('TVL_TEMPLATES_DIR', TVL_THEME_DIR . '/template_parts/');
 define('TVL_STYLES_URL', TVL_THEME_URL . '/css/');
 define('TVL_IMAGES_URL', TVL_THEME_URL . '/images/');
 
+//metabox para capturar a latitude e longitude
+include(TVL_THEME_DIR.'/functions/geolocation-metafield.php');
+
+function add_scripts_to_plugin()
+{
+     wp_enqueue_script( 'geolocation', get_template_directory_uri() . '/js/geolocation.js');
+}
+add_action('admin_enqueue_scripts', 'add_scripts_to_plugin');
+
 // Add a widget in WordPress Dashboard
 function wpc_dashboard_widget_function() {
     // Entering the text between the quotes
