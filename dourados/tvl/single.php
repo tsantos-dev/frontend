@@ -24,7 +24,7 @@ get_header();
                 <?php 
 
                 $get_geolocalization = get_post_meta(get_the_ID(), 'meta-geolocation', true);
-                $key = 'AIzaSyDewSEmmXb0t89G2Hd9sMoOYG2-DFydZ9s';
+               
                 
                 if(isset($get_geolocalization) && $get_geolocalization !== '') { ?>
                 
