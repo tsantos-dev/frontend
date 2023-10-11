@@ -16,13 +16,7 @@
                 <input type="checkbox" id="nav" class="hidden"/>
                 <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
                 <div class="nav-container">
-                    <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Fale conosco</a></li>
-                </ul>
+                    <?php wp_nav_menu( 'primary_menu' ) ?>                    
                 </div>
             </nav>
         </div>
