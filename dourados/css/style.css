@@ -74,7 +74,6 @@ header .hidden {
 
 main {
   padding-top: 200px;
-  height: 100vh;
 }
 main .row {
   align-items: stretch;
@@ -99,6 +98,10 @@ main .row {
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.page h2 {
+  margin: 50px !important;
 }
 
 @media screen and (max-width: 560px) {

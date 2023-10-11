@@ -76,7 +76,7 @@ header{
 
 main{
     padding-top: 200px;
-    height: 100vh;
+    // height: 100vh;
     .row{align-items: stretch;}
     
 }
@@ -102,7 +102,12 @@ main{
     padding: 20px;
     box-sizing: border-box;
 }
+.page{
+  h2{
+    margin: 50px!important;
 
+  }
+}
 @media screen and (max-width: 560px) {
 	.nav-container {
     position: fixed;
