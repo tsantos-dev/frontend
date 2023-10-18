@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
     <header>
         <div class="container d-flex align-items-center justify-content-between">
-            <h1>Dourados em patrimônio</h1>
+            <h1><img src="<?php echo get_template_directory_uri().'/images/marca.png'; ?>" alt="<?php echo 'Marca do site '.bloginfo( 'name' ); ?>"></h1>
             <nav>
                 <input type="checkbox" id="nav" class="hidden"/>
                 <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
