@@ -9,7 +9,7 @@
 .card .card-img-overlay .badge a {
   color: #fff;
 }
-.card.statusFalse {
+.card .status-1 {
   opacity: 0.5;
   cursor: not-allowed;
 }
