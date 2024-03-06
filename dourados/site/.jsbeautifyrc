@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "Default High Contrast",
+    "compile-hero.generate-minified-css": true,
+    "compile-hero.generate-minified-javascript": true,
+    "compile-hero.javascript-output-directory": "./themes/tvl/js",
+    "compile-hero.less-output-directory": "./themes/tvl/css",
+    "compile-hero.sass-output-directory": "./themes/tvl/css",
+    "compile-hero.scss-output-directory": "./themes/tvl/css",
+    "compile-hero.typescript-output-directory": "./themes/tvl/js",
+    "compile-hero.typescriptx-output-directory": "./themes/tvl/assets/js",
+    "compile-hero.pug-output-directory": "./themes/tvl/",
+    "compile-hero.stylus-output-directory": "./themes/tvl/",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.openRepositoryInParentFolders": "always",
+    "git.autofetch": true,
+    "compile-hero.config": ""
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "tvl/geolocation-block",
+  "version": "0.0.1",
+  "title": "Geolocalização",
+  "category": "widgets",
+  "icon": "location",
+  "description": "Captura de latitude e longitude do item",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "geolocation-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

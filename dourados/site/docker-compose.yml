@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1nt3rn3t
+      MYSQL_DATABASE: site_db_1
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: 1nt3rn3t
+      WORDPRESS_DB_NAME: site_db_1
+    volumes:
+          - ./wp-content:/var/www/html/wp-content
+          - ./plugins:/var/www/html/wp-content/plugins
+          - ./themes/tvl:/var/www/html/wp-content/themes/tvl
+          - ./compose/local/wordpress/wp-config.d/wp-config.php:/var/www/html/wp-config.php
+          - ./compose/local/wordpress/htaccess/.htaccess:/var/www/html/.htaccess
+          - ./compose/production/wordpress/php/extra.ini:/usr/local/etc/php/conf.d/extra.ini
+volumes:
+    db_data:
