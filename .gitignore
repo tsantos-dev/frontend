@@ -2,14 +2,15 @@ bugingar/dist/js/app.js
 bugingar/dist/js/app.prod.js
 bugingar/dist/js/navbar.js
 bugingar/dist/js/navbar.prod.js
-
 bugingar/dist/css/card.css
-
 bugingar/dist/sass/*
-
 bugingar/dist/fotos_posts/pinterest-*
+
 dourados/site-base
 
+golia/node_modules
+
+##REMOVER DA LISTA
 
 React/
 amigosdobem/
